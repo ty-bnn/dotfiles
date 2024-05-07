@@ -18,6 +18,4 @@ function! s:load(file) abort
 endfunction
 
 call s:load('plugins')
-
-" vim自体の設定
-set number
+call s:load('option')

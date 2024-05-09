@@ -19,3 +19,6 @@ endfunction
 
 call s:load('plugins')
 call s:load('option')
+
+" シンタックスハイライトをONにする
+syntax enable

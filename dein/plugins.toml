@@ -71,3 +71,10 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 EOF
 '''
+
+# ファイルツリー
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+map <C-n> :NERDTreeToggle<CR>
+'''

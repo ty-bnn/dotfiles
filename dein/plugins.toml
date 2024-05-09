@@ -6,7 +6,10 @@ lua << EOF
 local lspconfig = require('lspconfig')
 lspconfig.pyright.setup {}
 lspconfig.tsserver.setup {}
+-- GoのLanguage Server
 lspconfig.gopls.setup{}
+-- C/C++のLanguage Server
+lspconfig.clangd.setup{}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

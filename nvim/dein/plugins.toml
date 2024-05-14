@@ -84,3 +84,16 @@ map <C-n> :NERDTreeToggle<CR>
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'
+
+# lazy設定をするとリポジトリ内のluaファイルがruntimepath（この場合は./local/dein/.cache）から漏れる
+[[plugins]]
+repo = 'Shougo/ddc-source-lsp'
+on_source = 'ddc.vim'
+hook_add = '''
+lua << EOF
+local capabilities = require("ddc_source_lsp").make_client_capabilities()
+require("lspconfig").denols.setup({
+  capabilities = capabilities,
+})
+EOF
+'''

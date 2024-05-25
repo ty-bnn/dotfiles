@@ -1,6 +1,8 @@
 " vim自体の設定
 set number
 set splitright
+set clipboard&
+set clipboard^=unnamedplus
 
 " 括弧の自動補完
 inoremap { {}<LEFT>
